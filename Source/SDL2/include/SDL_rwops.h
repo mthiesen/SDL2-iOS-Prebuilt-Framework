@@ -29,6 +29,13 @@
 #ifndef _SDL_rwops_h
 #define _SDL_rwops_h
 
+#if defined(__clang__)
+#   if __has_warning("-Wdocumentation")
+#       pragma clang diagnostic push
+#       pragma clang diagnostic ignored "-Wdocumentation"
+#   endif
+#endif
+
 #include "SDL_stdinc.h"
 #include "SDL_error.h"
 
@@ -225,6 +232,12 @@ extern DECLSPEC size_t SDLCALL SDL_WriteBE64(SDL_RWops * dst, Uint64 value);
 }
 #endif
 #include "close_code.h"
+
+#if defined(__clang__)
+#   if __has_warning("-Wdocumentation")
+#       pragma clang diagnostic pop
+#   endif
+#endif
 
 #endif /* _SDL_rwops_h */
 

@@ -201,8 +201,6 @@ typedef SDL_AssertState (SDLCALL *SDL_AssertionHandler)(
  *
  *  This callback is NOT reset to SDL's internal handler upon SDL_Quit()!
  *
- *  \return SDL_AssertState value of how to handle the assertion failure.
- *
  *  \param handler Callback function, called when an assertion fails.
  *  \param userdata A pointer passed to the callback as-is.
  */
